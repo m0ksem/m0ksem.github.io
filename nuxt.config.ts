@@ -10,7 +10,11 @@ export default defineNuxtConfig({
           api: 'modern-compiler' // or "modern"
         }
       }
-    }
+    },
+  },
+
+  build: {
+    transpile: ['@m0ksem/vue-glsl']
   },
 
   typescript: {
@@ -31,5 +35,10 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap' },
       ]
     }
+  },
+
+  site: {
+    url: 'https://m0ksem.github.io',
+    name: 'm0ksem'
   }
 })
