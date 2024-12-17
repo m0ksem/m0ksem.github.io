@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   vite: {
+    base: '',
     css: {
       preprocessorOptions: {
         scss: {
@@ -14,7 +15,7 @@ export default defineNuxtConfig({
   },
 
   build: {
-    transpile: ['@m0ksem/vue-glsl']
+    transpile: ['@m0ksem/vue-glsl'],
   },
 
   typescript: {
