@@ -1,0 +1,59 @@
+// :root {
+//   --m-background: #ffffff;
+//   --m-background--soft: #e1e1f0;
+
+//   --m-color: #151515;
+// }
+
+// @media (prefers-color-scheme: dark) {
+:root {
+  --m-background: #000000;
+  --m-background--soft: #1d1c21;
+
+  --m-color: #d5d2d2;
+}
+// }
+
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  color: var(--m-color);
+}
+
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+}
+
+.link, .link:visited {
+  color: var(--m-color) !important;
+  text-decoration: none;
+  position: relative;
+  padding: 4px 8px;
+
+  &::before {
+    position: absolute;
+    width: calc(100% - 16px);
+    height: 2px;
+    bottom: 0;
+    left: 8px;
+    content: '';
+    background-color: var(--m-rgb);
+    opacity: 0.2;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  &:hover::before { opacity: 0.5;}
+}
+
+button, a {
+  &:focus {
+    outline: 2px solid var(--m-rgb);
+    outline-offset: 0.25rem;
+  }
+}
